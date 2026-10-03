@@ -1,0 +1,5 @@
+Model,Best_CV_AUC,Best_parameters
+Logistic Regression,0.9079718590588156,{'model__C': 0.1}
+Decision Tree,0.866276758668063,"{'model__max_depth': None, 'model__min_samples_leaf': 2}"
+Random Forest,0.9066199903156423,"{'model__n_estimators': 100, 'model__min_samples_leaf': 2, 'model__max_depth': 10}"
+SVM,0.906716833890747,"{'model__kernel': 'linear', 'model__gamma': 'scale', 'model__C': 0.1}"

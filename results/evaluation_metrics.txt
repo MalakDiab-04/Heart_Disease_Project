@@ -1,0 +1,36 @@
+Baseline Classification Models
+Evaluation on the held-out 20% test set
+Positive class: 1 = disease present
+
+              Model  Accuracy  Precision  Recall     F1  ROC_AUC
+Logistic Regression    0.8361     0.8000  0.8571 0.8276   0.9307
+      Decision Tree    0.8525     0.8276  0.8571 0.8421   0.8501
+      Random Forest    0.8689     0.8333  0.8929 0.8621   0.9318
+                SVM    0.8689     0.8571  0.8571 0.8571   0.9405
+
+Clustering Evaluation
+      Method  Clusters  Silhouette  Adjusted_Rand_Index
+     K-Means         4      0.1460                0.162
+Hierarchical         2      0.1649                0.174
+
+
+Hyperparameter Tuning
+              Model  Best_CV_AUC                                                                    Best_parameters
+Logistic Regression     0.907972                                                                  {'model__C': 0.1}
+      Decision Tree     0.866277                           {'model__max_depth': None, 'model__min_samples_leaf': 2}
+      Random Forest     0.906620 {'model__n_estimators': 100, 'model__min_samples_leaf': 2, 'model__max_depth': 10}
+                SVM     0.906717              {'model__kernel': 'linear', 'model__gamma': 'scale', 'model__C': 0.1}
+
+Baseline versus Tuned Test Metrics
+              Model  Version  Accuracy  Precision  Recall     F1  ROC_AUC
+Logistic Regression Baseline    0.8361     0.8000  0.8571 0.8276   0.9318
+Logistic Regression    Tuned    0.8689     0.8571  0.8571 0.8571   0.9297
+      Decision Tree Baseline    0.8689     0.8571  0.8571 0.8571   0.8442
+      Decision Tree    Tuned    0.8852     0.8889  0.8571 0.8727   0.8452
+      Random Forest Baseline    0.8689     0.8571  0.8571 0.8571   0.9210
+      Random Forest    Tuned    0.8525     0.8065  0.8929 0.8475   0.9491
+                SVM Baseline    0.8689     0.8571  0.8571 0.8571   0.9361
+                SVM    Tuned    0.8689     0.8571  0.8571 0.8571   0.9297
+
+Selected model: Logistic Regression
+Exported pipeline: models/final_model.pkl

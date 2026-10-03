@@ -1,0 +1,15 @@
+Live Streamlit App
+URL: https://lubricant-unbutton-datebook.ngrok-free.dev 
+
+Availability:
+The link works while Streamlit and Ngrok are running and
+computer is awake and connected to the internet.
+
+To launch:
+1. From the project root:
+   python -m streamlit run ui/app.py --server.port 8501
+
+2. In a second terminal:
+   ngrok http 8501
+
+3. Open the HTTPS forwarding URL displayed by Ngrok.

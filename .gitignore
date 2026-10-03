@@ -1,0 +1,33 @@
+# Python cache
+__pycache__/
+*.py[cod]
+.pytest_cache/
+
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# Virtual Environments
+venv/
+.venv/
+env/
+
+# Secrets and local configuration
+.env
+.env.*
+!.env.example
+.streamlit/secrets.toml
+ngrok.yml
+ngrok.yaml
+
+# Logs
+*.log
+
+# IDE & Editor files
+.vscode/
+.idea/
+
+# OS specific files
+.DS_Store
+Thumbs.db
+Desktop.ini

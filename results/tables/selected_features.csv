@@ -1,0 +1,13 @@
+feature
+sex
+exang
+ca
+cp_2.0
+cp_3.0
+cp_4.0
+restecg_1.0
+restecg_2.0
+slope_2.0
+slope_3.0
+thal_6.0
+thal_7.0
